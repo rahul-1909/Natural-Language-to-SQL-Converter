@@ -1,0 +1,12 @@
+# Core dependencies
+streamlit
+python-dotenv
+mysql-connector-python
+pandas
+plotly
+
+# LangChain ecosystem
+langchain
+langchain-core
+langchain-community
+langchain-groq
