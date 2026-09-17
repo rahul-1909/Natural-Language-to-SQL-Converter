@@ -1,7 +1,14 @@
 import streamlit as st
 import json
 import os
+import sys
 import re
+
+# Ensure src directory is in sys.path for Streamlit Cloud deployment
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+
 from datetime import datetime
 from dotenv import load_dotenv
 from langchain_core.messages import AIMessage, HumanMessage
