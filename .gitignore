@@ -1,6 +1,15 @@
-*
-!.gitignore
-!requirements.txt
-!README.md
-!src/
-!src/**
+# Virtual environment & dependencies
+venv/
+ENV/
+
+# Secrets & Environment variables (NEVER COMMIT)
+.env
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Application logs & user history
+logs/
+chat_history.json
