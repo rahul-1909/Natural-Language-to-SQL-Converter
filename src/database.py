@@ -35,6 +35,19 @@ def init_csv_database(df: pd.DataFrame, table_name: str = "uploaded_data") -> SQ
     return SQLDatabase.from_uri(f"sqlite:///{db_path}")
 
 
+def transcribe_audio(audio_bytes, api_key: str = None) -> str:
+    """Transcribes audio recordings using Groq's high-speed Whisper model"""
+    from groq import Groq
+    key = api_key or os.getenv("GROQ_API_KEY")
+    client = Groq(api_key=key)
+    transcription = client.audio.transcriptions.create(
+        file=("voice_query.wav", audio_bytes, "audio/wav"),
+        model="whisper-large-v3-turbo",
+        response_format="text"
+    )
+    return str(transcription).strip()
+
+
 def sanitize_query(query: str) -> str:
     """Enhanced SQL sanitization with precise extraction"""
     code_match = re.search(r"```(?:sql)?(.*?)```", query,
@@ -173,8 +186,8 @@ Provide a clear, helpful, conversational explanation of the result."""
             for keyword in ["visualize", "chart", "pie", "bar", "graph", "plot"]
         )
 
-        return natural_response, query_result, is_visualization_requested
+        return natural_response, query_result, is_visualization_requested, sanitized_query
 
     except Exception as e:
         logging.error(f"Error in get_response: {e}")
-        return f"⚠️ Error: {str(e)}", None, False
+        return f"⚠️ Error: {str(e)}", None, False, ""
