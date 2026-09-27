@@ -1,4 +1,4 @@
-# ⚡ QueryAI — Natural Language to SQL Analytics Platform
+# QueryAI - Natural Language to SQL Analytics Platform
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Streamlit_Community_Cloud-FF4B4B?style=for-the-badge&logo=streamlit)](https://nl2sql-analytics.streamlit.app)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
