@@ -25,7 +25,7 @@
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ System Design and Architecture
 
 ```
                        ┌───────────────────────────────┐
