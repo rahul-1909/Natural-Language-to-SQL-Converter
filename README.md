@@ -106,7 +106,7 @@ Natural-Language-to-SQL-Converter/
 
 ---
 
-## 🚀 Quickstart (Local Setup)
+## 🚀 Quickstart & Local Setup
 
 ### 1. Clone the Repository
 ```bash
