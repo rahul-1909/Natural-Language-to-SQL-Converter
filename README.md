@@ -10,7 +10,7 @@
 
 ---
 
-##  Key Features
+## 🌟 Key Features
 
 - 🗣️ **Conversational Text-to-SQL**: Ask complex data questions in plain English—no SQL expertise required.
 - 🎙️ **Voice Dictation (Groq Whisper)**: Speak your query directly into the chatbar via speech-to-text powered by `whisper-large-v3-turbo`.
@@ -105,10 +105,6 @@ Natural-Language-to-SQL-Converter/
 ```
 
 ---
-
-## Setup
-
-See the installation instructions below to run the project locally.
 
 ## 🚀 Quickstart (Local Setup)
 
